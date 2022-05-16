@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
-import * as MovieActions from '../../store/movies/movies.actions'
+import * as MovieActions from '../../store/movies/movies.actions';
 
 export interface State{
     movies: any[],
@@ -13,7 +13,7 @@ const initialState: State = {
     selectedMovie: null
 };
 
-const movieReducer = createReducer(
+export const movieReducer = createReducer(
     initialState,
     on(MovieActions.fetchMovies,
         (state:State)=> ({
@@ -41,6 +41,6 @@ const movieReducer = createReducer(
     on(MovieActions.removeFromLikes,
         (state: State, action)=>({
             ...state,
-            likedMovies: state.likedMovies.filter((movie)=> movie.id !== action.id);
+            likedMovies: state.likedMovies.filter((movie)=> movie.id !== action.id)
         }))
-)
+);
