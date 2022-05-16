@@ -9,6 +9,8 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
 import { LikedMoviesComponent } from './components/liked-movies/liked-movies.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({}, {}),
+    StoreDevtoolsModule.instrument({logOnly: environment.production})
   ],
   providers: [],
   bootstrap: [AppComponent]
