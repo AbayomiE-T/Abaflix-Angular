@@ -11,6 +11,7 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
+import * as fromApp from './store/app.reducer'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { environment } from 'src/environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot(fromApp.appReducer),
     StoreDevtoolsModule.instrument({logOnly: environment.production})
   ],
   providers: [],
