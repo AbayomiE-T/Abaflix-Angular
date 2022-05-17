@@ -1,10 +1,11 @@
 import { createReducer, on } from "@ngrx/store";
+import { IMovie } from "src/app/interfaces/IMovie";
 import * as MovieActions from '../../store/movies/movies.actions';
 
 export interface State{
-    movies: any[],
-    likedMovies: any[],
-    selectedMovie: any;
+    movies: IMovie[],
+    likedMovies: IMovie[],
+    selectedMovie: IMovie | null;
 };
 
 const initialState: State = {

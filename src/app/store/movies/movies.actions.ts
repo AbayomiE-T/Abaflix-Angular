@@ -1,10 +1,11 @@
 import { createAction, props } from "@ngrx/store";
+import { IMovie } from "src/app/interfaces/IMovie";
 
 export const fetchMovies = createAction('[Movies] Fetch Movies');
 
 export const setMovies = createAction(
     '[Movies] Set Movies',
-    props<{movies: any}>());
+    props<{movies: IMovie[]}>());
 
 export const findMovie = createAction(
     '[Movies] Find Movie',
@@ -13,7 +14,7 @@ export const findMovie = createAction(
 
 export const addToLikes = createAction(
     '[Movies] Add To Likes',
-    props<{movie: any}>()
+    props<{movie: IMovie}>()
 )
 
 export const removeFromLikes = createAction(

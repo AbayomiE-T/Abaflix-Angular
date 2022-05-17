@@ -10,7 +10,7 @@ export class MovieEffects{
         ofType(MovieActions.fetchMovies),
         tap(()=>{console.log("calling effect")}),
         switchMap(()=> this.movieService.getMovies()
-        .pipe(map((movies)=> MovieActions.setMovies({movies}))))
+        .pipe(map((res)=> MovieActions.setMovies({movies: res.results}))))
     ))
 
     constructor(private actions$: Actions, private movieService: MovieService){}
