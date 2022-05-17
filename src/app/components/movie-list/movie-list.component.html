@@ -2,7 +2,7 @@
     <p class="empty-list" *ngIf="!(movies$ | async)?.length">Looks like this list is empty! :(</p>
 
     <div class="movie-list-content">
-        <a class="movie-wrapper" href="#" *ngFor="let movie of (movies$ | async)">
+        <a class="movie-wrapper" [routerLink]="['/detail', movie.id]" *ngFor="let movie of (movies$ | async)">
             <img class="grow poster" [src]="baseUrl + movie.poster_path" [alt]="movie.title"/>
         </a>
     </div>

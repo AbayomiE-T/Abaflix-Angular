@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,15 +7,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Output() 
-  private goToFavourites = new EventEmitter<boolean>();
-
-  @Output()
-  private goBackHome = new EventEmitter<boolean>();
-
   public isHomePageActive:boolean = true;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -23,11 +18,11 @@ export class HeaderComponent implements OnInit {
     this.isHomePageActive = !this.isHomePageActive;
 
     if (!this.isHomePageActive){
-      this.goToFavourites.emit(this.isHomePageActive);
+      this.router.navigate(['likes']);
     }
 
     if (this.isHomePageActive){
-      this.goBackHome.emit(this.isHomePageActive);
+      this.router.navigate(['/']);
     }
   }
 
