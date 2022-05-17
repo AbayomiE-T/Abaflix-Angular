@@ -1,1 +1,4 @@
-<p>movie-list works!</p>
+<p *ngIf="!(movies$ | async)?.length">Looks like this list is empty! :(</p>
+<div *ngFor="let movie of (movies$ | async)">
+    <p>{{movie.title}}</p>
+</div>
