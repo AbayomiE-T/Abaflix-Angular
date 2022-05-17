@@ -1,0 +1,7 @@
+<nav class="navigation">
+    <div class="nav-item-container">
+        <span class="logo">ABAFLIX</span>
+        <span (click)="togglePage()" *ngIf="isHomePageActive" class="nav-item"> Go to favourites <i class="fa fa-angle-right"></i></span>
+        <span (click)="togglePage()" *ngIf="!isHomePageActive" class="nav-item"> <i class="fa fa-angle-left"></i> Go back home </span>
+    </div>
+</nav>

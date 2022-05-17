@@ -9,12 +9,12 @@ import { MovieComponent } from './components/movie/movie.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { LikedMoviesComponent } from './components/liked-movies/liked-movies.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import * as fromApp from './store/app.reducer'
 import { EffectsModule } from '@ngrx/effects';
 import { MovieEffects } from './store/movies/movie.effects';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { MovieEffects } from './store/movies/movie.effects';
     MovieListComponent,
     LikedMoviesComponent,
     MovieDetailComponent,
-    NavbarComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

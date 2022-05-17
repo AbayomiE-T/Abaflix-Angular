@@ -1,0 +1,30 @@
+.navigation{
+    color:#D72638;
+
+    & .nav-item-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    & .nav-item{
+        cursor: pointer;
+        padding-right: 20px;
+    }
+    
+    & .logo{
+        font-family: 'Monoton', cursive;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .navigation{
+        & .nav-item-container{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
