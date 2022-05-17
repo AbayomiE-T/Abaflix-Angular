@@ -1,0 +1,40 @@
+.movie-list-content{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(1, 200px);
+    justify-content: center;
+    gap: 20px;
+}
+
+.movie-wrapper{
+    text-decoration: none;
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+.poster{
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (min-width: 500px) {
+    .movie-list-content{
+        grid-template-columns: repeat(2, 200px);
+        gap: 40px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .movie-list-content{
+        grid-template-columns: repeat(2, 300px);
+        gap: 40px;
+    }
+}
+
+@media only screen and (min-width: 1110px) {
+    .movie-list-content{
+        grid-template-columns: repeat(3, 300px);
+        gap: 40px;
+    }
+}

@@ -12,6 +12,8 @@ export class MovieListComponent implements OnInit {
   @Input()
   public movies$: Observable<IMovie[]>;
 
+  public baseUrl: string = "https://image.tmdb.org/t/p/w300";
+
   constructor() { }
 
   ngOnInit(): void {
