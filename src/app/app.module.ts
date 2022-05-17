@@ -15,6 +15,7 @@ import * as fromApp from './store/app.reducer'
 import { EffectsModule } from '@ngrx/effects';
 import { MovieEffects } from './store/movies/movie.effects';
 import { HeaderComponent } from './components/header/header.component';
+import { MoviesComponent } from './components/movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HeaderComponent } from './components/header/header.component';
     MovieListComponent,
     LikedMoviesComponent,
     MovieDetailComponent,
-    HeaderComponent
+    HeaderComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
