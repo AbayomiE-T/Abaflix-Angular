@@ -8,7 +8,6 @@ import * as MovieActions from './movies.actions'
 export class MovieEffects{
     fetchMovies$ = createEffect(()=> this.actions$.pipe(
         ofType(MovieActions.fetchMovies),
-        tap(()=>{console.log("calling effect")}),
         switchMap(()=> this.movieService.getMovies()
         .pipe(map((res)=> MovieActions.setMovies({movies: res.results}))))
     ))

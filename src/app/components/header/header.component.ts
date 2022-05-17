@@ -7,10 +7,10 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Output() 
-  public goToFavourites = new EventEmitter<boolean>();
+  private goToFavourites = new EventEmitter<boolean>();
 
   @Output()
-  public goBackHome = new EventEmitter<boolean>();
+  private goBackHome = new EventEmitter<boolean>();
 
   public isHomePageActive:boolean = true;
 
@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public togglePage(){
+  public togglePage(): void {
     this.isHomePageActive = !this.isHomePageActive;
 
     if (!this.isHomePageActive){

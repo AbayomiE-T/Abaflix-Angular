@@ -1,2 +1,3 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<app-header (goToFavourites)="toggleView($event)" (goBackHome)="toggleView($event)" ></app-header>
+<app-movies *ngIf="isHomePageActive"></app-movies>
+<app-liked-movies *ngIf="!isHomePageActive"></app-liked-movies>
