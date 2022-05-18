@@ -1,0 +1,64 @@
+.backdrop-poster{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    top: 0px;
+}
+
+.cover-image{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    background: linear-gradient(to right, #07020D 50%, transparent);
+}
+
+.movie-detail{
+    margin: auto;
+    width: 90%;
+}
+
+.movie-title{
+    font-family: 'Monoton', cursive;
+    color: #D72638;
+    font-size: 3rem;
+}
+
+.blurb{
+    margin-top: 2rem; 
+}
+
+.button{
+    margin-top: 2rem;
+    cursor: pointer;
+    display: block;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.button:hover{
+    color: #D72638;
+}
+
+.liked{
+    color: #D72638;
+}
+
+.icon{
+    padding-left: 0.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .movie-detail{
+        padding: 2rem 0 0 2rem;
+        width: 40%;
+        margin: 0;
+    }
+}
